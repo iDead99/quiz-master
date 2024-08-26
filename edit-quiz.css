@@ -1,0 +1,140 @@
+/* Common styles for the dashboard */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-color: #f4f4f4;
+}
+
+.dashboard {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+
+.sidebar {
+    background-color: #333;
+    color: white;
+    width: 250px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebar-header h2 {
+    margin: 0;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 40px 0;
+}
+
+.nav-links li {
+    margin-bottom: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: #0066cc;
+}
+
+#logout {
+    background-color: #dc3545;
+    text-align: center;
+}
+
+.main-content {
+    flex: 1;
+    padding: 30px;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.main-header h1 {
+    font-size: 2em;
+    margin: 0;
+}
+
+#confirm-update-quiz{
+    text-align: center;
+    animation: display-confirm-update-quiz 1s 1;
+    animation-timing-function: steps();
+}
+#confirm-update-quiz p{
+    background-color: #11ce3a;
+    color: white;
+    padding: 3px;
+    border-radius: 5px;
+    display: inline;
+}
+@keyframes display-confirm-update-quiz {
+    from{
+        transform: translateY(-360%);
+    }
+}
+
+.profile {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.profile h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+.profile form {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile label {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.profile input, textarea {
+    padding: 10px;
+    font-size: 1em;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.btn-update-quiz {
+    background-color: #007bff;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-update-quiz:hover {
+    background-color: #0056b3;
+}

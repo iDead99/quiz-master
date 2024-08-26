@@ -1,0 +1,153 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-color: #f4f4f4;
+}
+
+.dashboard {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+
+.sidebar {
+    background-color: #333;
+    color: white;
+    width: 250px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebar-header h2 {
+    margin: 0;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 40px 0;
+}
+
+.nav-links li {
+    margin-bottom: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links #create-quiz,
+.nav-links a:hover {
+    background-color: #0066cc;
+}
+
+#logout {
+    background-color: #dc3545;
+    text-align: center;
+}
+
+.main-content {
+    flex: 1;
+    padding: 30px;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.main-header h1 {
+    font-size: 2em;
+    margin: 0;
+}
+
+#confirm-create-quiz{
+    text-align: center;
+    animation: display-confirm-create-quiz 1s 1;
+    animation-timing-function: steps();
+}
+#confirm-create-quiz p{
+    background-color: #11ce3a;
+    color: white;
+    padding: 3px;
+    border-radius: 5px;
+    display: inline;
+}
+@keyframes display-confirm-create-quiz {
+    from{
+        transform: translateY(-360%);
+    }
+}
+
+.create-quiz h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+.create-quiz form {
+    display: flex;
+    flex-direction: column;
+}
+
+.create-quiz label {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.create-quiz input,
+.create-quiz textarea {
+    padding: 10px;
+    font-size: 1em;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#add-question-btn-container{
+    display: flex;
+    justify-content: right;
+}
+
+#add-question-btn{
+    background-color: #007bff;
+    color: white;
+    width: fit-content;
+    padding: 4px;
+    border-radius: 5px;
+    font-size: 15px;
+    margin-top: -15px;
+    cursor: pointer;
+}
+#add-question-btn:hover {
+    background-color: #0056b3;
+}
+
+.btn-create {
+    background-color: #28a745;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-create:hover {
+    background-color: #218838;
+}

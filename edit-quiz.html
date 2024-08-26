@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Quiz</title>
+    <link rel="stylesheet" href="edit-quiz.css">
+</head>
+<body>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Quiz Master</h2>
+            </div>
+            <ul class="nav-links">
+                <li><a href="master-dashboard.html" id="overview">Overview</a></li>
+                <li><a href="create-quiz.html" id="create-quiz">Create Quiz</a></li>
+                <li><a href="manage-quizzes.html" id="manage-quizzes">Manage Quizzes</a></li>
+                <li><a href="start-quiz.html" id="quiz-controls">Start Quiz</a></li>
+                <li><a href="profile.html" id="profile">Profile</a></li>
+                <li><a href="settings.html" id="settings">Settings</a></li>
+                <li><a href="logout.html" id="logout">Logout</a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <div id="confirm-update-quiz" style="display: none;">
+                <p>Quiz updated successfully.</p>
+            </div>
+            <header class="main-header">
+                <h1>Quiz</h1>
+
+            </header>
+
+            <section class="profile">
+                <form id="quiz-form">
+                    <label for="quiz-title">Quiz Title:</label>
+                    <input type="text" id="quiz-title" name="quiz-title" required>
+
+                    <label for="description">Description:</label>
+                    <textarea id="description" name="description" rows="4" required></textarea>
+
+                    <label for="date-to-start">Date To Start:</label>
+                    <input type="datetime-local" id="date-to-start" name="date-to-start" required>
+
+                    <button type="submit" class="btn-update-quiz">Update Quiz</button>
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <script src="edit-quiz.js"></script>
+</body>
+</html>

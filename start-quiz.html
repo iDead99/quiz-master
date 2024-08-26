@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start Quiz</title>
+    <link rel="stylesheet" href="start-quiz.css">
+</head>
+<body>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Quiz Master</h2>
+            </div>
+            <ul class="nav-links">
+                <li><a href="master-dashboard.html" id="overview">Overview</a></li>
+                <li><a href="create-quiz.html" id="create-quiz">Create Quiz</a></li>
+                <li><a href="manage-quizzes.html" id="manage-quizzes">Manage Quizzes</a></li>
+                <li><a href="start-quiz.html" id="start-quiz">Start Quiz</a></li>
+                <li><a href="profile.html" id="profile">Profile</a></li>
+                <li><a href="settings.html" id="settings">Settings</a></li>
+                <li><a href="logout.html" id="logout">Logout</a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+
+            <header class="main-header">
+                <h1>Select Quiz</h1>
+            </header>
+
+            <section class="manage-quizzes">
+                <div class="quiz-list">
+                    <table id="table">
+                        <thead>
+                            <tr>
+                                <th>Quiz Title</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbody"></tbody>
+                    </table>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script src="start-quiz.js"></script>
+</body>
+</html>

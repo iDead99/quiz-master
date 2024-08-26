@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overview</title>
+    <link rel="stylesheet" href="master-dashboard.css">
+</head>
+<body>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Quiz Master</h2>
+            </div>
+            <ul class="nav-links">
+                <li><a href="" id="overview">Overview</a></li>
+                <li><a href="create-quiz.html" id="create-quiz">Create Quiz</a></li>
+                <li><a href="manage-quizzes.html" id="manage-quizzes">Manage Quizzes</a></li>
+                <li><a href="start-quiz.html" id="quiz-controls">Start Quiz</a></li>
+                <li><a href="profile.html" id="profile">Profile</a></li>
+                <li><a href="settings.html" id="Settings">Settings</a></li>
+                <li><a href="logout.html" id="logout">Logout</a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <header class="main-header">
+                <h1>Dashboard Overview</h1>
+                <div class="user-info">
+                    <span id="master-name">Welcome</span>
+                    <!-- <img src="profile.jpg" alt="User Profile Picture" class="profile-pic"> -->
+                </div>
+            </header>
+
+            <section class="stats">
+                <div class="stat-card">
+                    <h3>Total Quizzes</h3>
+                    <p id="total-quizzes"></p>
+                </div>
+                <div class="stat-card">
+                    <h3>Total Questions</h3>
+                    <p id="total-questions"></p>
+                </div>
+                <div class="stat-card">
+                    <h3>Quiz Master</h3>
+                    <a href="profile.html"><p id="quiz-master"></p></a>
+                </div>
+            </section>
+
+            <section class="recent-activities">
+                <h2>Recent Activities</h2>
+                <ul>
+                    <li id="created-a-new-quiz"></li>
+                    <li id="updated-the-quiz">Updated the quiz:</li>
+                    <li id="deleted-the-quiz">Deleted the quiz:</li>
+                </ul>
+            </section>
+
+            <section class="create-quiz">
+                <!-- <h2>Create a New Quiz</h2>
+                <form>
+                    <label for="quiz-title">Quiz Title:</label>
+                    <input type="text" id="quiz-title" name="quiz-title" required>
+
+                    <label for="quiz-description">Description:</label>
+                    <textarea id="quiz-description" name="quiz-description" rows="4" required></textarea>
+
+                    <label for="quiz-date">Date:</label>
+                    <input type="date" id="quiz-date" name="quiz-date" required> -->
+
+                    <a href="create-quiz.html"><button type="submit" class="btn-create">Create Quiz</button></a>
+                <!-- </form> -->
+            </section>
+        </main>
+    </div>
+
+    <script src="master-dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Quiz</title>
+    <link rel="stylesheet" href="create-quiz.css">
+</head>
+<body>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Quiz Master</h2>
+            </div>
+            <ul class="nav-links">
+                <li><a href="master-dashboard.html" id="overview">Overview</a></li>
+                <li><a href="" id="create-quiz">Create Quiz</a></li>
+                <li><a href="manage-quizzes.html" id="manage-quizzes">Manage Quizzes</a></li>
+                <li><a href="start-quiz.html" id="quiz-controls">Start Quiz</a></li>
+                <li><a href="profile.html" id="profile">Profile</a></li>
+                <li><a href="settings.html" id="Settings">Settings</a></li>
+                <li><a href="logout.html" id="logout">Logout</a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <div id="confirm-create-quiz" style="display: none;">
+            <p>Quiz created successfully. You may add questions!</p>
+        </div>
+
+
+            <section id="create-quiz" class="create-quiz">
+                <h2>Create a New Quiz</h2>
+                <div id="add-question-btn-container">
+                <a href="add-questions.html"><button id="add-question-btn">ADD QUESTIONS</button></a>
+            </div>
+                <form id="create-quiz-form">
+                    <label for="quiz-title">Quiz Title:</label>
+                    <input type="text" id="quiz-title" name="quiz-title" required>
+
+                    <label for="quiz-description">Description:</label>
+                    <textarea id="quiz-description" name="quiz-description" rows="4" required></textarea>
+
+                    <label for="quiz-date">Date To Start:</label>
+                    <input type="datetime-local" id="quiz-date" name="quiz-date" required>
+
+                    <button type="submit" class="btn-create">Create Quiz</button>
+                </form>
+            </section>
+
+        </main>
+    </div>
+
+    <script src="create-quiz.js"></script>
+</body>
+</html>

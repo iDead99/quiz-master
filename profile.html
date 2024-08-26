@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Quiz Master</h2>
+            </div>
+            <ul class="nav-links">
+                <li><a href="master-dashboard.html" id="overview">Overview</a></li>
+                <li><a href="create-quiz.html" id="create-quiz">Create Quiz</a></li>
+                <li><a href="manage-quizzes.html" id="manage-quizzes">Manage Quizzes</a></li>
+                <li><a href="start-quiz.html" id="quiz-controls">Start Quiz</a></li>
+                <li><a href="profile.html" id="profile">Profile</a></li>
+                <li><a href="settings.html" id="settings">Settings</a></li>
+                <li><a href="logout.html" id="logout">Logout</a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <div id="confirm-update-profile" style="display: none;">
+                <p>Profile updated successfully.</p>
+            </div>
+            <header class="main-header">
+                <h1>Profile</h1>
+
+            </header>
+
+            <section class="profile">
+                <form id="profile-form">
+                    <label for="first-name">First name:</label>
+                    <input type="text" id="first-name" name="first-name" required>
+
+                    <label for="username">Last Name:</label>
+                    <input type="text" id="last-name" name="last-name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" readonly required title="can't change email here">
+
+                    <label for="gender">Gender:</label>
+                    <select name="gender" id="gender"></select>
+
+                    <label for="phone">Phone number:</label>
+                    <input type="tel" id="phone" name="phone">
+
+                    <button type="submit" class="btn-update-profile">Update Profile</button>
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <script src="profile.js"></script>
+</body>
+</html>

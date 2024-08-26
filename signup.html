@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="signup.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="form-section">
+        <div class="container">
+            <div class="form-container">
+                <h2>Sign Up</h2>
+                <form id="signup-form" method="">
+                    <div class="form-group">
+                        <label for="signup-first-name">First Name</label>
+                        <input type="text" id="signup-first-name" name="first-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-last-name">Last Name</label>
+                        <input type="text" id="signup-last-name" name="last-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-gender">Gender</label>
+                        <select id="signup-gender" name="gender" required></select>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-email">Email</label>
+                        <span id="email-error" style="color: red; display: none;"></span>
+                        <input type="email" id="signup-email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-phone">Phone number</label>
+                        <input type="tel" id="signup-phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-password">Password</label>
+                        <span id="password-error" style="color: red; display: none;"></span>
+                        <input type="password" id="signup-password" name="password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-confirm-password">Confirm Password</label>
+                        <input type="password" id="signup-confirm-password" name="confirm-password" required>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn">Sign Up</button>
+                    </div>
+                </form>
+                <p>Already have an account? <a href="login.html">Login</a></p>
+            </div>
+        </div>
+    </section>
+
+    <script src="signup.js"></script>
+</body>
+</html>

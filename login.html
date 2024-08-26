@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="form-section">
+        <div class="container">
+            <div class="form-container">
+                <h2>Login</h2>
+                <form id="login-form" method="">
+                    <div class="form-group">
+                        <label for="login-email">Email</label>
+                        <span id="user-pass-error" style="color: red; display: none;"></span>
+                        <input type="email" id="login-email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <input type="password" id="login-password" name="password" required>
+                    </div>
+                    <div class="form-group">
+                        <button id="submit-btn" type="submit" class="btn">Login</button>
+                    </div>
+                </form>
+                <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+            </div>
+        </div>
+    </section>
+    
+    <script src="login.js"></script>
+</body>
+</html>

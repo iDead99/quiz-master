@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Questions</title>
+    <link rel="stylesheet" href="add-questions.css">
+</head>
+<body>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Quiz Master</h2>
+            </div>
+            <ul class="nav-links">
+                <li><a href="master-dashboard.html" id="overview">Overview</a></li>
+                <li><a href="create-quiz.html" id="create-quiz">Create Quiz</a></li>
+                <li><a href="manage-quizzes.html" id="manage-quizzes">Manage Quizzes</a></li>
+                <li><a href="start-quiz.html" id="quiz-controls">Start Quiz</a></li>
+                <li><a href="profile.html" id="profile">Profile</a></li>
+                <li><a href="add-questions.html" id="settings">Settings</a></li>
+                <li><a href="logout.html" id="logout">Logout</a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <div id="confirm-create-question" style="display: none;">
+                <p>Question created successfully.</p>
+            </div>
+
+            <header class="main-header">
+                <h1>Add Questions to Quiz</h1>
+            </header>
+
+            <section class="add-questions">
+                <form id="add-questions-form">
+
+                    <label id="quiz-label" for="correct-answer">Particular Quiz:</label>
+                    <select id="quiz" name="quiz"></select>
+                    
+                    <label for="question-text">Question:</label>
+                    <input type="text" id="question-text" name="question-text" required>
+
+                    <label id="answer-option-label-1" for="answer-option-1" style="display: none;">Option A:</label>
+                    <div class="delete-option-btn" id="delete-option-btn-1" style="display: none;">x</div>
+                    <input type="text" id="answer-option-1" name="answer-option-1" style="display: none;">
+
+                    <label id="answer-option-label-2" for="answer-option-2" style="display: none;">Option B:</label>
+                    <!-- <div class="delete-option-btn" id="delete-option-btn-2" style="display: none;">x</div> -->
+                    <input type="text" id="answer-option-2" name="answer-option-2" style="display: none;">
+
+                    <label id="answer-option-label-3" for="answer-option-3" style="display: none;">Option C:</label>
+                    <!-- <div class="delete-option-btn" id="delete-option-btn-3" style="display: none;">x</div> -->
+                    <input type="text" id="answer-option-3" name="answer-option-3" style="display: none;">
+
+                    <label id="answer-option-label-4" for="answer-option-4" style="display: none;">Option D:</label>
+                    <!-- <div class="delete-option-btn" id="delete-option-btn-4" style="display: none;">x</div> -->
+                    <input type="text" id="answer-option-4" name="answer-option-4" style="display: none;">
+
+                    <span id="add-option-btn">ADD OPTION+</span> <br>
+
+                    <label id="correct-answer-label" for="correct-answer" style="display: none;">Correct Answer:</label>
+                    <select id="correct-answer" name="correct-answer" style="display: none;"></select>
+
+                    <button type="submit" class="btn-add-question">Add Question</button>
+                </form>
+            </section>
+        </main>
+    </div>
+    <script src="add-questions.js"></script>
+</body>
+</html>

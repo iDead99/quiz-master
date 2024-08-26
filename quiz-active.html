@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Active</title>
+    <link rel="stylesheet" href="quiz-active.css">
+</head>
+<body id="body">
+    <div class="dashboard">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Quiz Master</h2>
+            </div>
+            <ul class="nav-links">
+                <li><a href="master-dashboard.html" id="overview">Overview</a></li>
+                <li><a href="create-quiz.html" id="create-quiz">Create Quiz</a></li>
+                <li><a href="manage-quizzes.html" id="manage-quizzes">Manage Quizzes</a></li>
+                <li><a href="start-quiz.html" id="quiz-controls">Start Quiz</a></li>
+                <li><a href="profile.html" id="profile">Profile</a></li>
+                <li><a href="settings.html" id="settings">Settings</a></li>
+                <li><a href="logout.html" id="logout">Logout</a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <header class="main-header">
+                <h1>Active Quiz</h1>
+            </header>
+
+            
+            <section class="quiz-container">
+                <div class="question-section">
+                    <div id="read-btn-container">
+                        <button id="read-btn">🔊</button>
+                    </div>
+                    <h2>Current Question</h2>
+                    <p id="question-text"></p>
+                    <p class="option" id="option-a" style="display: none;"></p>
+                    <p class="option" id="option-b" style="display: none;"></p>
+                    <p class="option" id="option-c" style="display: none;"></p>
+                    <p class="option" id="option-d" style="display: none;"></p>
+                    <div id="next-btn-container">
+                    <button id="previous-btn" style="display: none;">Previous <<</button>
+                    <button id="next-btn">Next >></button>
+                    <button id="finish-btn" style="display: none;">Finish</button>
+                </div>
+                </div>
+
+                <div class="control-section">
+                    <button class="btn-correct">Correct</button>
+                    <button class="btn-wrong">Wrong</button>
+                </div>
+            </section>
+
+        </main>
+    </div>
+    <h3 id="right-txt" style="display: none;">CORRECT ANSWER!!</h3>
+    <h3 id="wrong-txt" style="display: none;">WRONG ANSWER!!</h3>
+
+    <audio id="correct-answer-audio" src="audio/correct-answer.mp3" type="audio/mpeg" style="display: none;"></audio>
+    <audio id="wrong-answer-audio" src="audio/wrong-answer.mp3" type="audio/mpeg" style="display: none;"></audio>
+
+    <script src="quiz-active.js"></script>
+</body>
+</html>

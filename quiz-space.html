@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="quiz-space.css">
+</head>
+<body id="body">
+    <div id="horizontal-pane"></div>
+
+    <span id="back">Back</span>
+    <header id="header">
+        
+        <div id="banner">
+            <span>QUIZ ACTIVE</span>
+        </div>
+        <hr color="gray">
+        <div id="outer-red">
+            <div id="inner-green">quiz active</div>
+        </div>
+    </header>
+
+    <main>
+        <div id="right-wrong-container">
+        <button class="right-wrong" id="right">RIGHT</button>
+        <button class="right-wrong" id="wrong">WRONG</button>
+    </div>
+    <h3 id="right-txt" style="display: none;">CORRECT ANSWER!!</h3>
+    <h3 id="wrong-txt" style="display: none;">WRONG ANSWER!!</h3>
+
+    <audio id="correct-answer-audio" src="audio/correct-answer.mp3" type="audio/mpeg" style="display: none;"></audio>
+    <audio id="wrong-answer-audio" src="audio/wrong-answer.mp3" type="audio/mpeg" style="display: none;"></audio>
+
+    </main>
+
+    <script src="quiz-space.js"></script>
+</body>
+</html>
