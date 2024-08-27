@@ -58,7 +58,7 @@ firstRegistration(userData);
 })
 
 function firstRegistration(userData){
-    fetch("http://127.0.0.1:8000/auth/users/", {
+    fetch("https://quiz-master-back.onrender.com/auth/users/", {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -97,7 +97,7 @@ function firstRegistration(userData){
 
 
 function authenticateUser(userData){
-    fetch("http://127.0.0.1:8000/auth/jwt/create",{
+    fetch("https://quiz-master-back.onrender.com/auth/jwt/create",{
         method: 'POST',
         headers: {
            'Content-Type': 'application/json'
@@ -129,7 +129,7 @@ function authenticateUser(userData){
 function secondRegistration(secondUserData){
     const accessToken=localStorage.getItem('accessToken');
 
-    fetch('http://127.0.0.1:8000/manage_quizmaster/masters/me/', {
+    fetch('https://quiz-master-back.onrender.com/manage_quizmaster/masters/me/', {
     method: 'PUT',
     headers: {
        'Authorization': `JWT ${accessToken}`,

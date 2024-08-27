@@ -31,7 +31,7 @@ document.getElementById('create-quiz-form').addEventListener('submit', function(
 function createQuiz(){
     const accessToken = localStorage.getItem('accessToken')
     
-    fetch('http://127.0.0.1:8000/manage_quizmaster/quizzes/', {
+    fetch('https://quiz-master-back.onrender.com/manage_quizmaster/quizzes/', {
         method: 'POST',
         headers: {
             'Authorization': `JWT ${accessToken}`,

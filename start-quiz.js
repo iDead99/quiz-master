@@ -11,7 +11,7 @@ if(!accessToken){
 function getQuiz(){
     const accessToken = localStorage.getItem('accessToken')
 
-    fetch('http://127.0.0.1:8000/manage_quizmaster/quizzes/', {
+    fetch('https://quiz-master-back.onrender.com/manage_quizmaster/quizzes/', {
         headers: {
             'Authorization': `JWT ${accessToken}`,
             'Content-Type': 'application/json',

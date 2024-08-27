@@ -34,7 +34,7 @@ function genderLoad(){
 
 function fetchUserProfile(){
     const accessToken = localStorage.getItem('accessToken')
-    fetch('http://127.0.0.1:8000/auth/users/me/', {
+    fetch('https://quiz-master-back.onrender.com/auth/users/me/', {
         headers: {
             'Authorization': `JWT ${accessToken}`,
             'Content-Type': 'application/json',          
@@ -58,7 +58,7 @@ function fetchUserProfile(){
 
 function fetchMasterProfile(){
     const accessToken = localStorage.getItem('accessToken')
-    fetch('http://127.0.0.1:8000/manage_quizmaster/masters/me/', {
+    fetch('https://quiz-master-back.onrender.com/manage_quizmaster/masters/me/', {
         headers: {
             'Authorization': `JWT ${accessToken}`,
             'Content-Type': 'application/json',          
@@ -93,7 +93,7 @@ document.getElementById('profile-form').addEventListener('submit', function(e) {
 
 function updateUserProfile(){
     const accessToken = localStorage.getItem('accessToken')
-    fetch('http://127.0.0.1:8000/auth/users/me/', {
+    fetch('https://quiz-master-back.onrender.com/auth/users/me/', {
         method: 'PUT',
         headers: {
             'Authorization': `JWT ${accessToken}`,
@@ -119,7 +119,7 @@ function updateUserProfile(){
 
 function updateMasterProfile(){
     const accessToken = localStorage.getItem('accessToken')
-    fetch('http://127.0.0.1:8000/manage_quizmaster/masters/me/', {
+    fetch('https://quiz-master-back.onrender.com/manage_quizmaster/masters/me/', {
         method: 'PUT',
         headers: {
             'Authorization': `JWT ${accessToken}`,
