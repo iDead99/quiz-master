@@ -298,7 +298,7 @@ function populateQuizForm(quizData) {
         let optionReadFinish = false;
 
         const questionTextutterance = new SpeechSynthesisUtterance(questionText.textContent.slice(3))
-        questionTextutterance.rate=0.7;
+        // questionTextutterance.rate=0.7;
         window.speechSynthesis.speak(questionTextutterance);
 
         const optionAutterance = new SpeechSynthesisUtterance(optionA.textContent)
@@ -308,19 +308,19 @@ function populateQuizForm(quizData) {
 
         if(`${quizData[questionCount].option1}`!==''){
             window.speechSynthesis.speak(optionAutterance);
-            optionAutterance.rate=0.7;
+            // optionAutterance.rate=0.7;
         }
         if(`${quizData[questionCount].option2}`!==''){
             window.speechSynthesis.speak(optionButterance);
-            optionButterance.rate=0.7;
+            // optionButterance.rate=0.7;
         }
         if(`${quizData[questionCount].option3}`!==''){
             window.speechSynthesis.speak(optionCutterance);
-            optionCutterance.rate=0.7;
+            // optionCutterance.rate=0.7;
         }
         if(`${quizData[questionCount].option4}`!==''){
             window.speechSynthesis.speak(optionDutterance);
-            optionDutterance.rate=0.7;
+            // optionDutterance.rate=0.7;
         }
 
         optionDutterance.onend = () => {
