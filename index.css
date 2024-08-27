@@ -44,7 +44,7 @@ header {
     background: linear-gradient(to right, #0066cc, #005bb5);
     color: white;
     text-align: center;
-    padding: 120px 20px;
+    padding: 120px 0px;
     margin-bottom: 40px;
 }
 
@@ -89,6 +89,7 @@ header {
     display: flex;
     justify-content: space-around;
     gap: 40px;
+    overflow: scroll;
 }
 
 .step {
@@ -97,7 +98,7 @@ header {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 300px;
-    text-align: left;
+    text-align: center;
 }
 
 .step h3 {
@@ -144,18 +145,18 @@ header {
     color: white;
 }
 
-.btn-correct:hover {
+/* .btn-correct:hover {
     transform: scale(1.1);
-}
+} */
 
 .btn-wrong {
     background-color: #dc3545;
     color: white;
 }
 
-.btn-wrong:hover {
+/* .btn-wrong:hover {
     transform: scale(1.1);
-}
+} */
 
 .cta {
     background-color: #0066cc;
@@ -195,4 +196,15 @@ footer {
     color: white;
     text-align: center;
     padding: 20px;
+}
+
+@media (max-width: 480px) {
+    .quiz-buttons {
+        gap: 10px;
+    }
+
+    .btn-correct, .btn-wrong {
+        padding: 20px 35px;
+        font-size: 1.5em;
+    }
 }

@@ -195,6 +195,7 @@ body {
     text-shadow: 0px 0px 20px black;
     font-size: 50px;
     animation: display-answer-text 2s ease;
+    text-align: center;
 }
 @keyframes display-answer-text {
     from{
@@ -210,4 +211,5 @@ body {
     text-shadow: 0px 0px 20px black;
     font-size: 50px;
     animation: display-answer-text 2s ease;
+    text-align: center;
 }

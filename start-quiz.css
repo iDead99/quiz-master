@@ -129,6 +129,12 @@ th {
     background-color: #218838;
 }
 
+@media (max-width: 480px){
+    .manage-quizzes {
+        width: 200px;
+    }
+}
+
 
 
 
