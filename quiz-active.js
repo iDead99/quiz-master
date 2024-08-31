@@ -117,7 +117,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function getParticularQuiz(id) {
 
-    fetch(`http://127.0.0.1:8000/manage_quizmaster/questions/?quiz__id=${id}`, {
+    fetch(`https://quiz-master-back.onrender.com/manage_quizmaster/questions/?quiz__id=${id}`, {
         headers: {
             'Authorization': `JWT ${accessToken}`,
             'Content-Type': 'application/json',

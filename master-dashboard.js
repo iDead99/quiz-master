@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function getMasterName(){
 
-    fetch('http://127.0.0.1:8000/auth/users/me/', {
+    fetch('https://quiz-master-back.onrender.com/auth/users/me/', {
         headers: {
             'Authorization': `JWT ${accessToken}`,
             'Content-Type': 'application/json',
@@ -67,7 +67,7 @@ function getMasterName(){
 
 function getQuiz(){
 
-    fetch('http://127.0.0.1:8000/manage_quizmaster/quizzes/', {
+    fetch('https://quiz-master-back.onrender.com/manage_quizmaster/quizzes/', {
         headers: {
             'Authorization': `JWT ${accessToken}`,
             'Content-Type': 'application/json',
@@ -93,7 +93,7 @@ function getQuiz(){
 
 function getQuestion(){
 
-    fetch('http://127.0.0.1:8000/manage_quizmaster/questions/', {
+    fetch('https://quiz-master-back.onrender.com/manage_quizmaster/questions/', {
         headers: {
             'Authorization': `JWT ${accessToken}`,
             'Content-Type': 'application/json',
