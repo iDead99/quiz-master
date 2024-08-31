@@ -8,6 +8,7 @@
     box-shadow: 0px 0px 20px rgb(185, 185, 185);
     width: 280px;
     justify-content: center;
+    animation: display-logout 1s;
 }
 #logout-text{
     margin-top: 30px;
@@ -24,4 +25,10 @@
     margin-top: 30px;
     margin-bottom: 15px;
     border: 0;
+}
+
+@keyframes display-logout{
+    from{
+        opacity: 10%;
+    }
 }

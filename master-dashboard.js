@@ -9,6 +9,7 @@ const updatedQuiz=document.getElementById('updated-the-quiz');
 const deletedTheQuiz=document.getElementById('deleted-the-quiz');
 
 const accessToken=localStorage.getItem('accessToken');
+
 if(!accessToken){
     window.location.href="login.html";
  }
@@ -17,12 +18,32 @@ document.addEventListener('DOMContentLoaded', function() {
     getMasterName();
     getQuiz();
     getQuestion();
+
+    const createdQecentActivity = localStorage.getItem('createdQuizRecentActivity')
+
+    if(createdQecentActivity){
+    const recentActivityElement = document.querySelector('.recent-activities');
+    const activityItem = document.createElement('li');
+    activityItem.textContent = createdQecentActivity;
+    recentActivityElement.appendChild(activityItem)
+
+    }
+
+    const recentActivity = localStorage.getItem('updatedQuizRecentActivity')
+
+    if(recentActivity){
+    const recentActivityElement = document.querySelector('.recent-activities');
+    const activityItem = document.createElement('li');
+    activityItem.textContent = recentActivity;
+    recentActivityElement.appendChild(activityItem)
+
+    }
+
 })
 
 function getMasterName(){
-    const accessToken = localStorage.getItem('accessToken')
 
-    fetch('https://quiz-master-back.onrender.com/auth/users/me/', {
+    fetch('http://127.0.0.1:8000/auth/users/me/', {
         headers: {
             'Authorization': `JWT ${accessToken}`,
             'Content-Type': 'application/json',
@@ -45,9 +66,8 @@ function getMasterName(){
 
 
 function getQuiz(){
-    const accessToken = localStorage.getItem('accessToken')
 
-    fetch('https://quiz-master-back.onrender.com/manage_quizmaster/quizzes/', {
+    fetch('http://127.0.0.1:8000/manage_quizmaster/quizzes/', {
         headers: {
             'Authorization': `JWT ${accessToken}`,
             'Content-Type': 'application/json',
@@ -65,9 +85,6 @@ function getQuiz(){
             quizNumber++;
         })
         totalQuiz.textContent=quizNumber;
-        if(quizNumber!==0){
-        createdNewQuiz.textContent+=`Created a new quiz: "${data[0].title}"`
-        }
     })
     .catch(error => {
         alert(error);
@@ -75,9 +92,8 @@ function getQuiz(){
 }
 
 function getQuestion(){
-    const accessToken = localStorage.getItem('accessToken')
 
-    fetch('https://quiz-master-back.onrender.com/manage_quizmaster/questions/', {
+    fetch('http://127.0.0.1:8000/manage_quizmaster/questions/', {
         headers: {
             'Authorization': `JWT ${accessToken}`,
             'Content-Type': 'application/json',

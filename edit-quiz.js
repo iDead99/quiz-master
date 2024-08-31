@@ -5,6 +5,8 @@ const confirmUpdateProfile = document.getElementById('confirm-update-quiz');
 const submitBtn = document.querySelector('.btn-update-quiz');
 
 const accessToken = localStorage.getItem('accessToken');
+let quizName='';
+
 if (!accessToken) {
     window.location.href = "login.html";
 }
@@ -29,9 +31,8 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function getParticularQuiz(id) {
-    const accessToken = localStorage.getItem('accessToken');
 
-    fetch(`https://quiz-master-back.onrender.com/manage_quizmaster/quizzes/${id}/`, {
+    fetch(`http://127.0.0.1:8000/manage_quizmaster/quizzes/${id}/`, {
         headers: {
             'Authorization': `JWT ${accessToken}`,
             'Content-Type': 'application/json',
@@ -44,7 +45,7 @@ function getParticularQuiz(id) {
         return response.json();
     })
     .then(data => {
-        populateQuizForm(data); // Populate the form with quiz data
+        populateQuizForm(data)
     })
     .catch(error => {
         alert(error);
@@ -69,6 +70,8 @@ function populateQuizForm(quizData) {
     // dateToStart = localDateToStart.slice(0, 16); // Truncate milliseconds
 
     dateToStart.value = startDate;
+
+    quizName = quizData.title
 }
 
 document.getElementById('quiz-form').addEventListener('submit', function(e) {
@@ -87,9 +90,8 @@ document.getElementById('quiz-form').addEventListener('submit', function(e) {
 });
 
 function updateQuiz(id) {
-    const accessToken = localStorage.getItem('accessToken');
     
-    fetch(`https://quiz-master-back.onrender.com/manage_quizmaster/quizzes/${id}/`, {
+    fetch(`http://127.0.0.1:8000/manage_quizmaster/quizzes/${id}/`, {
         method: 'PUT',
         headers: {
             'Authorization': `JWT ${accessToken}`,
@@ -119,6 +121,10 @@ function updateQuiz(id) {
             }
         }
         return response.json();
+    })
+    .then(data => {
+        const updatedQuizName = `Updated the quiz: "from ${quizName} to ${data.title}"`;
+        localStorage.setItem('updatedQuizRecentActivity', updatedQuizName)
     })
     .catch(error => {
         alert(error);

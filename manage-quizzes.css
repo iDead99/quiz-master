@@ -25,7 +25,7 @@ body {
 
 .sidebar-header h2 {
     margin: 0;
-    font-size: 1.5em;
+    font-size: 2em;
     font-weight: bold;
     text-align: center;
 }
@@ -63,6 +63,12 @@ body {
 .main-content {
     flex: 1;
     padding: 30px;
+    animation: display-main-content 1s;
+}
+@keyframes display-main-content{
+    from{
+        opacity: 10%;
+    }
 }
 
 .main-header {
@@ -154,6 +160,7 @@ th {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    animation: display-confirm-quiz-deletion 1s;
 }
 #confirm-delete-quiz-text{
     margin-bottom: 15px;
@@ -171,4 +178,10 @@ th {
     border-radius: 5px;
     margin-bottom: 15px;
     border: 0;
+}
+
+@keyframes display-confirm-quiz-deletion{
+    from{
+        opacity: 10%;
+    }
 }

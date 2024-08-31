@@ -1,17 +1,16 @@
 const accessToken=localStorage.getItem('accessToken');
+
 if(!accessToken){
     window.location.href="login.html";
  }
-
 
  document.addEventListener('DOMContentLoaded', function() {
     getQuiz();
 })
 
 function getQuiz(){
-    const accessToken = localStorage.getItem('accessToken')
 
-    fetch('https://quiz-master-back.onrender.com/manage_quizmaster/quizzes/', {
+    fetch('http://127.0.0.1:8000/manage_quizmaster/quizzes/', {
         headers: {
             'Authorization': `JWT ${accessToken}`,
             'Content-Type': 'application/json',

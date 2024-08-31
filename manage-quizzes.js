@@ -10,14 +10,14 @@ document.addEventListener('DOMContentLoaded', function() {
 })
 
 const accessToken=localStorage.getItem('accessToken');
+
 if(!accessToken){
     window.location.href="login.html";
  }
 
 function getQuiz(){
-    const accessToken = localStorage.getItem('accessToken')
 
-    fetch('https://quiz-master-back.onrender.com/manage_quizmaster/quizzes/', {
+    fetch('http://127.0.0.1:8000/manage_quizmaster/quizzes/', {
         headers: {
             'Authorization': `JWT ${accessToken}`,
             'Content-Type': 'application/json',
@@ -39,9 +39,8 @@ function getQuiz(){
 
 
 function deleteQuiz(id){
-    const accessToken = localStorage.getItem('accessToken')
 
-    fetch(`https://quiz-master-back.onrender.com/manage_quizmaster/quizzes/${id}/`, {
+    fetch(`http://127.0.0.1:8000/manage_quizmaster/quizzes/${id}/`, {
         method: 'DELETE',
         headers: {
             'Authorization': `JWT ${accessToken}`,

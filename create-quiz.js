@@ -5,6 +5,7 @@ const confirmCreateQuiz = document.getElementById('confirm-create-quiz')
 const submitBtn = document.querySelector('.btn-create')
 
 const accessToken=localStorage.getItem('accessToken');
+
 if(!accessToken){
     window.location.href="login.html";
  }
@@ -29,9 +30,8 @@ document.getElementById('create-quiz-form').addEventListener('submit', function(
 })
 
 function createQuiz(){
-    const accessToken = localStorage.getItem('accessToken')
     
-    fetch('https://quiz-master-back.onrender.com/manage_quizmaster/quizzes/', {
+    fetch('http://127.0.0.1:8000/manage_quizmaster/quizzes/', {
         method: 'POST',
         headers: {
             'Authorization': `JWT ${accessToken}`,
@@ -59,6 +59,10 @@ function createQuiz(){
             quizDate.value=''
           }
           return response.json();
+       })
+       .then(data => {
+        const createdQuizName = `Created a new quiz: "${data.title}"`;
+        localStorage.setItem('createdQuizRecentActivity', createdQuizName)        
        })
        .catch(error => {
         alert(error)

@@ -22,6 +22,12 @@ const wrongText=document.getElementById("wrong-txt");
 const correctAnswerAudio=document.getElementById("correct-answer-audio");
 const wrongAnswerAudio=document.getElementById("wrong-answer-audio");
 
+const accessToken = localStorage.getItem('accessToken');
+
+if(!accessToken){
+    window.location.href="login.html";
+ }
+
 correctBtn.addEventListener('click', function() {
     dashboard.style.display='none';
     body.style.backgroundColor='rgba(0, 230, 0, 1)';
@@ -110,9 +116,8 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function getParticularQuiz(id) {
-    const accessToken = localStorage.getItem('accessToken');
 
-    fetch(`https://quiz-master-back.onrender.com/manage_quizmaster/questions/?quiz__id=${id}`, {
+    fetch(`http://127.0.0.1:8000/manage_quizmaster/questions/?quiz__id=${id}`, {
         headers: {
             'Authorization': `JWT ${accessToken}`,
             'Content-Type': 'application/json',

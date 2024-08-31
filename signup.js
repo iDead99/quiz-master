@@ -6,6 +6,8 @@ const phone = document.getElementById('signup-phone');
 const password = document.getElementById('signup-password');
 const confirmPassword = document.getElementById('signup-confirm-password');
 
+const spinner = document.querySelector('.spinner');
+
 const emailError = document.getElementById('email-error');
 const passwordError = document.getElementById('password-error');
 
@@ -54,11 +56,17 @@ document.getElementById('signup-form').addEventListener('submit',function(e) {
         password: password.value,
         };
 
-firstRegistration(userData);
+   firstRegistration(userData);
+
+   spinner.style.display='block';
+   submitBtn.disabled=true;
+   if(submitBtn.disabled===true){
+      submitBtn.style.opacity='50%';
+   }
 })
 
 function firstRegistration(userData){
-    fetch("https://quiz-master-back.onrender.com/auth/users/", {
+    fetch("http://127.0.0.1:8000/auth/users/", {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -76,9 +84,20 @@ function firstRegistration(userData){
                   passwordError.textContent=error.password;
                   passwordError.style.display='inline-block';
                 }
+                spinner.style.display='none';
+                submitBtn.disabled=false;
+                if(submitBtn.disabled===false){
+                    submitBtn.style.opacity='100%';
+                }
             })   
         }
         else{
+         
+         spinner.style.display='none';
+         submitBtn.disabled=false;
+         if(submitBtn.disabled===false){
+             submitBtn.style.opacity='100%';
+         }
 
              const authUserData={
                 email: email.value,
@@ -97,7 +116,7 @@ function firstRegistration(userData){
 
 
 function authenticateUser(userData){
-    fetch("https://quiz-master-back.onrender.com/auth/jwt/create",{
+    fetch("http://127.0.0.1:8000/auth/jwt/create",{
         method: 'POST',
         headers: {
            'Content-Type': 'application/json'
@@ -129,7 +148,7 @@ function authenticateUser(userData){
 function secondRegistration(secondUserData){
     const accessToken=localStorage.getItem('accessToken');
 
-    fetch('https://quiz-master-back.onrender.com/manage_quizmaster/masters/me/', {
+    fetch('http://127.0.0.1:8000/manage_quizmaster/masters/me/', {
     method: 'PUT',
     headers: {
        'Authorization': `JWT ${accessToken}`,

@@ -28,6 +28,7 @@ const submitBtn = document.querySelector('.btn-add-question')
 
 
 const accessToken=localStorage.getItem('accessToken');
+
 if(!accessToken){
     window.location.href="login.html";
  }
@@ -289,9 +290,8 @@ document.getElementById('add-questions-form').addEventListener('submit', functio
 })
 
 function getQuizzes(){
-    const accessToken = localStorage.getItem('accessToken')
     
-    fetch('https://quiz-master-back.onrender.com/manage_quizmaster/quizzes/', {
+    fetch('http://127.0.0.1:8000/manage_quizmaster/quizzes/', {
         headers: {
             'Authorization': `JWT ${accessToken}`,
             'Content-Type': 'application/json', 
@@ -319,9 +319,8 @@ function getQuizzes(){
 getQuizzes();
 
 function addQuestion(questionData){
-    const accessToken = localStorage.getItem('accessToken')
     
-    fetch('https://quiz-master-back.onrender.com/manage_quizmaster/questions/', {
+    fetch('http://127.0.0.1:8000/manage_quizmaster/questions/', {
         method: 'POST',
         headers: {
             'Authorization': `JWT ${accessToken}`,
