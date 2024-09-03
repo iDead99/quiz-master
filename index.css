@@ -92,10 +92,9 @@ header {
     justify-content: space-around;
     gap: 40px;
     overflow-x: scroll;
-    padding: 0 20px;
     scroll-snap-type: x mandatory;
-    scroll-padding: 20px; /* Add padding to the scroll area */
-    padding: 0 20px; /* Add padding inside the container */
+    scroll-padding: 20px;
+    padding: 0 20px;
 }
 
 .step {
@@ -105,8 +104,9 @@ header {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 300px;
     text-align: center;
-    scroll-snap-align: center; /* Center the item when it snaps */
+    scroll-snap-align: center;
 }
+
 
 
 .step h3 {
