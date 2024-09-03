@@ -89,8 +89,8 @@ header {
 
 .steps {
     display: flex;
-    justify-content: space-around;
-    /* justify-content: center; */
+    /* justify-content: space-around; */
+    justify-content: center;
     gap: 40px;
     overflow-x: scroll;
     border: 2px solid black;
