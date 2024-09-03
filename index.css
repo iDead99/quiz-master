@@ -93,6 +93,7 @@ header {
     align-items: center;
     gap: 40px;
     overflow-x: scroll;
+    border: 2px solid black;
 }
 
 .step {
@@ -202,9 +203,9 @@ footer {
 }
 
 @media (max-width: 480px) {
-    /* .steps{
+    .steps{
         flex-direction: column;
-    } */
+    }
     .quiz-buttons {
         gap: 10px;
     }
