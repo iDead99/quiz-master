@@ -90,7 +90,8 @@ header {
 .steps {
     display: flex;
     /* justify-content: space-around; */
-    /* gap: 40px; */
+    /* justify-content: center; */
+    gap: 40px;
     overflow-x: scroll;
     /* scroll-snap-type: x mandatory;
     scroll-padding: 20px; */
