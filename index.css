@@ -93,7 +93,6 @@ header {
     align-items: center;
     gap: 40px;
     overflow-x: scroll;
-    border: 2px solid black;
 }
 
 .step {
