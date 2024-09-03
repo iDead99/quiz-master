@@ -89,11 +89,10 @@ header {
 
 .steps {
     display: flex;
-    /* justify-content: space-around; */
-    justify-content: center;
-    /* gap: 40px; */
+    justify-content: space-around;
+    align-items: center;
+    gap: 40px;
     overflow-x: scroll;
-    /* border: 2px solid black; */
 }
 
 .step {
@@ -103,7 +102,6 @@ header {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 300px;
     text-align: center;
-    margin: 0 20px;
 }
 
 .step h3 {
