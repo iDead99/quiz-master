@@ -94,7 +94,8 @@ header {
     overflow-x: scroll;
     /* scroll-snap-type: x mandatory;
     scroll-padding: 20px; */
-    padding: 0 20px;
+    /* padding-left: 20px;
+    padding-right: 20px; */
 }
 
 .step {
@@ -104,7 +105,7 @@ header {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 300px;
     text-align: center;
-    /* scroll-snap-align: center; */
+    scroll-snap-align: center;
 }
 
 .step h3 {
